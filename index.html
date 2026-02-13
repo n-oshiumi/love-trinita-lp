@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO: Title 60文字以内、H1と整合性を持たせる -->
+  <title>Love Trinita | 大分トリニータ応援アプリ</title>
+
+  <!-- SEO: Description 150文字程度 -->
+  <meta name="description" content="大分トリニータサポーターのための完全無料アプリ。スコア予想、フォーメーション予想、MOM投票、掲示板でサポーター同士の交流を楽しもう。">
+
+  <!-- SEO: 追加メタタグ -->
+  <meta name="author" content="CHEERs.inc">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+  <link rel="canonical" href="https://love-trinita.com/">
+
+  <!-- モバイル最適化 -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#002B5C">
+
+  <!-- OGP: 最適化 -->
+  <meta property="og:title" content="Love Trinita | 大分トリニータ応援アプリ">
+  <meta property="og:description" content="スコア予想、MOM投票、掲示板。トリニータをもっと好きになる完全無料アプリ。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://love-trinita.com/">
+  <meta property="og:image" content="https://love-trinita.com/images/ogp.jpg">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+  <meta property="og:image:alt" content="Love Trinita アプリの機能紹介">
+  <meta property="og:site_name" content="Love Trinita">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Love Trinita | 大分トリニータ応援アプリ">
+  <meta name="twitter:description" content="スコア予想、MOM投票、掲示板。トリニータをもっと好きになる完全無料アプリ。">
+  <meta name="twitter:image" content="https://love-trinita.com/images/ogp.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/icon-512.png">
+
+  <!-- Core Web Vitals: Preconnect for faster resource loading -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            trinita: {
+              blue: '#0066CC',
+              navy: '#002B5C',
+              gold: '#FFD700',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Structured Data: MobileApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Love Trinita",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "SportsApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "description": "大分トリニータサポーターのための完全無料アプリ。スコア予想、フォーメーション予想、MOM投票、掲示板機能でサポーター同士の交流を楽しめます。",
+    "author": {
+      "@type": "Organization",
+      "name": "CHEERs.inc"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "1"
+    },
+    "downloadUrl": "https://apps.apple.com/jp/app/love-trinita/id6757410720"
+  }
+  </script>
+
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Love Trinita",
+    "url": "https://love-trinita.com/",
+    "description": "大分トリニータ応援アプリ",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CHEERs.inc"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CHEERs.inc",
+    "url": "https://love-trinita.com/",
+    "logo": "https://love-trinita.com/images/ogp.jpg"
+  }
+  </script>
+
+  <style>
+    /* Core Web Vitals: Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Core Web Vitals: CLS対策 - コンテンツの予約領域 */
+    .hero-image-container {
+      aspect-ratio: 1024 / 500;
+      contain: layout;
+    }
+
+    /* ヒーローセクション: グラデーション背景 */
+    .hero-gradient {
+      background: linear-gradient(135deg, #001428 0%, #002B5C 50%, #003d7a 100%);
+    }
+
+    /* 光のパーティクル */
+    .particles {
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(2px 2px at 10% 20%, rgba(255, 215, 0, 0.6) 0%, transparent 100%),
+        radial-gradient(2px 2px at 25% 60%, rgba(255, 255, 255, 0.4) 0%, transparent 100%),
+        radial-gradient(3px 3px at 45% 15%, rgba(255, 215, 0, 0.5) 0%, transparent 100%),
+        radial-gradient(2px 2px at 65% 75%, rgba(255, 255, 255, 0.3) 0%, transparent 100%),
+        radial-gradient(2px 2px at 85% 30%, rgba(255, 215, 0, 0.4) 0%, transparent 100%),
+        radial-gradient(3px 3px at 15% 85%, rgba(255, 255, 255, 0.3) 0%, transparent 100%),
+        radial-gradient(2px 2px at 75% 10%, rgba(255, 215, 0, 0.5) 0%, transparent 100%),
+        radial-gradient(2px 2px at 55% 50%, rgba(255, 255, 255, 0.4) 0%, transparent 100%),
+        radial-gradient(2px 2px at 35% 40%, rgba(255, 215, 0, 0.3) 0%, transparent 100%),
+        radial-gradient(3px 3px at 90% 65%, rgba(255, 255, 255, 0.35) 0%, transparent 100%);
+      animation: twinkle 4s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes twinkle {
+      0% { opacity: 0.4; }
+      100% { opacity: 1; }
+    }
+
+    /* CTAセクション用のグラデーション背景 */
+    .hero-bg {
+      background: linear-gradient(135deg, #001a33 0%, #002B5C 50%, #003d7a 100%);
+    }
+
+    /* スマホモックアップ */
+    .phone-mockup {
+      position: relative;
+      width: 280px;
+      height: 580px;
+      background: #000;
+      border-radius: 40px;
+      padding: 12px;
+      box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.1),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.1);
+    }
+
+    .phone-mockup::before {
+      content: '';
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 24px;
+      background: #000;
+      border-radius: 12px;
+      z-index: 10;
+    }
+
+    @media (min-width: 768px) {
+      .phone-mockup {
+        width: 320px;
+        height: 660px;
+      }
+    }
+
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Core Web Vitals: INP対策 - タッチ応答性向上 */
+    a, button {
+      touch-action: manipulation;
+    }
+
+    /* フォント最適化 */
+    body {
+      text-rendering: optimizeSpeed;
+    }
+
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3">
+      <a href="/" class="font-bold text-xl text-trinita-navy" aria-label="Love Trinita ホーム">Love Trinita</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center pt-16 relative overflow-hidden" aria-labelledby="hero-heading">
+      <!-- 背景装飾: スポットライト -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] bg-trinita-blue/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-trinita-gold/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/4 left-1/3 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-3xl"></div>
+      </div>
+      <!-- 光のパーティクル -->
+      <div class="particles" aria-hidden="true"></div>
+
+      <div class="max-w-6xl mx-auto px-4 py-20 md:py-24 relative z-10">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- 左側: テキスト -->
+          <div class="text-center md:text-left">
+            <span class="inline-block bg-trinita-gold text-trinita-navy text-sm font-bold px-4 py-1 rounded-full mb-6">
+              完全無料
+            </span>
+            <h1 id="hero-heading" class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              トリニータを<br>もっと好きになる。
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-200 mb-8">
+              予想して、投票して、語り合おう
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+              <a href="https://apps.apple.com/jp/app/love-trinita/id6757410720" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-white text-gray-900 px-6 py-3 rounded-xl hover:bg-gray-100 transition shadow-lg" aria-label="App Storeでダウンロード">
+                <svg class="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                </svg>
+                <div class="text-left">
+                  <div class="text-xs">Download on the</div>
+                  <div class="text-lg font-semibold -mt-1">App Store</div>
+                </div>
+              </a>
+              <div class="inline-flex items-center justify-center bg-white/10 backdrop-blur text-white px-6 py-3 rounded-xl cursor-not-allowed border border-white/20" aria-label="Google Playは準備中">
+                <svg class="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                </svg>
+                <div class="text-left">
+                  <div class="text-xs">準備中</div>
+                  <div class="text-lg font-semibold -mt-1">Google Play</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右側: スマホモックアップ -->
+          <div class="flex justify-center">
+            <div class="phone-mockup">
+              <img
+                src="images/app-screen.png"
+                alt="Love Trinita アプリのホーム画面"
+                class="w-full h-full object-cover object-top rounded-[32px]"
+                width="300"
+                height="600"
+                fetchpriority="high"
+                decoding="async"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gray-50" aria-labelledby="features-heading">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 id="features-heading" class="text-3xl md:text-4xl font-bold text-center text-trinita-navy mb-12">
+          主な機能
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <article class="feature-card bg-white border border-gray-200 rounded-2xl p-5 text-center">
+            <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3" aria-hidden="true">
+              <span class="text-2xl">⚽</span>
+            </div>
+            <h3 class="font-bold text-base mb-1 text-trinita-navy">スコア予想</h3>
+            <p class="text-gray-600 text-xs">キックオフ前に予想を投稿</p>
+          </article>
+          <article class="feature-card bg-white border border-gray-200 rounded-2xl p-5 text-center">
+            <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3" aria-hidden="true">
+              <span class="text-2xl">📋</span>
+            </div>
+            <h3 class="font-bold text-base mb-1 text-trinita-navy">フォーメーション予想</h3>
+            <p class="text-gray-600 text-xs">先発メンバーを予想</p>
+          </article>
+          <article class="feature-card bg-white border border-gray-200 rounded-2xl p-5 text-center">
+            <div class="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-3" aria-hidden="true">
+              <span class="text-2xl">🏆</span>
+            </div>
+            <h3 class="font-bold text-base mb-1 text-trinita-navy">MOM投票</h3>
+            <p class="text-gray-600 text-xs">最も活躍した選手に投票</p>
+          </article>
+          <article class="feature-card bg-white border border-gray-200 rounded-2xl p-5 text-center">
+            <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3" aria-hidden="true">
+              <span class="text-2xl">💬</span>
+            </div>
+            <h3 class="font-bold text-base mb-1 text-trinita-navy">掲示板</h3>
+            <p class="text-gray-600 text-xs">安心して語れるコミュニティ</p>
+          </article>
+          <article class="feature-card bg-white border border-gray-200 rounded-2xl p-5 text-center">
+            <div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3" aria-hidden="true">
+              <span class="text-2xl">📊</span>
+            </div>
+            <h3 class="font-bold text-base mb-1 text-trinita-navy">アンケート</h3>
+            <p class="text-gray-600 text-xs">みんなの意見を集計</p>
+          </article>
+          <article class="feature-card bg-white border border-gray-200 rounded-2xl p-5 text-center">
+            <div class="w-14 h-14 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-3" aria-hidden="true">
+              <span class="text-2xl">✨</span>
+            </div>
+            <h3 class="font-bold text-base mb-1 text-trinita-navy">特集</h3>
+            <p class="text-gray-600 text-xs">旬な話題をピックアップ</p>
+          </article>
+          <article class="feature-card bg-white border border-gray-200 rounded-2xl p-5 text-center">
+            <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3" aria-hidden="true">
+              <span class="text-2xl">👕</span>
+            </div>
+            <h3 class="font-bold text-base mb-1 text-trinita-navy">選手・スタッフ紹介</h3>
+            <p class="text-gray-600 text-xs">推しをもっと知ろう</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="py-20" aria-labelledby="howto-heading">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 id="howto-heading" class="text-3xl md:text-4xl font-bold text-center text-trinita-navy mb-12">
+          かんたん3ステップ
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-12 h-12 bg-trinita-blue text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold" aria-hidden="true">
+              1
+            </div>
+            <h3 class="font-bold text-lg mb-2">アプリをダウンロード</h3>
+            <p class="text-gray-600 text-sm">App Storeから無料でダウンロード</p>
+          </div>
+          <div class="text-center">
+            <div class="w-12 h-12 bg-trinita-blue text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold" aria-hidden="true">
+              2
+            </div>
+            <h3 class="font-bold text-lg mb-2">サポーター名を登録</h3>
+            <p class="text-gray-600 text-sm">あなただけのサポーター名を決めよう</p>
+          </div>
+          <div class="text-center">
+            <div class="w-12 h-12 bg-trinita-blue text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold" aria-hidden="true">
+              3
+            </div>
+            <h3 class="font-bold text-lg mb-2">みんなと盛り上がろう！</h3>
+            <p class="text-gray-600 text-sm">試合を予想して、投票して、語り合おう</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="download" class="py-20 hero-bg" aria-labelledby="cta-heading">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <span class="inline-block bg-trinita-gold text-trinita-navy text-sm font-bold px-4 py-1 rounded-full mb-6">
+          完全無料
+        </span>
+        <h2 id="cta-heading" class="text-3xl md:text-4xl font-bold text-white mb-8">
+          今すぐダウンロード
+        </h2>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://apps.apple.com/jp/app/love-trinita/id6757410720" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-black text-white px-8 py-4 rounded-xl hover:bg-gray-800 transition" aria-label="App Storeでダウンロード">
+            <svg class="w-10 h-10 mr-3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <div class="text-left">
+              <div class="text-xs">Download on the</div>
+              <div class="text-xl font-semibold -mt-1">App Store</div>
+            </div>
+          </a>
+          <div class="inline-flex items-center justify-center bg-gray-600 text-white px-8 py-4 rounded-xl opacity-70 cursor-not-allowed" aria-label="Google Playは準備中">
+            <svg class="w-10 h-10 mr-3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+            </svg>
+            <div class="text-left">
+              <div class="text-xs">準備中</div>
+              <div class="text-xl font-semibold -mt-1">Google Play</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-trinita-navy text-white py-8">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <div class="font-bold text-xl mb-2">Love Trinita</div>
+      <p class="text-blue-200 text-sm mb-4">大分トリニータ応援アプリ</p>
+      <div class="text-sm text-blue-300">
+        <p class="mb-1">CHEERs.inc</p>
+        <p>&copy; 2025 Love Trinita</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
